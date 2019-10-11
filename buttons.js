@@ -1,3 +1,9 @@
+const dropDown = document.querySelector(".drop-down");
+
+hamburger.addEventListener("click", () => {
+  dropDown.classList.toggle("opened");
+});
+
 function create(element) {
   return document.createElement(element);
 }
@@ -44,3 +50,14 @@ function SmallerButton(textContent, linkLocation, x, y, minWid) {
 
   return newButton;
 }
+
+document.querySelector(".button").appendChild(ButtonMaker("Projects", "#"));
+document
+  .querySelector(".drop-down")
+  .appendChild(SmallerButton("About", "#", 0.5, 0.5));
+document
+  .querySelector(".drop-down")
+  .appendChild(SmallerButton("Contact", "#", 0.5, 0.5));
+document
+  .querySelector(".drop-down")
+  .appendChild(SmallerButton("Github", "#", 0.5, 0.5));
