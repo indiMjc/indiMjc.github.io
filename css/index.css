@@ -141,11 +141,12 @@ nav {
 nav #logo {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 3rem;
   color: #b7b7fa;
 }
 nav .hamburger {
   filter: brightness(0) saturate(100%) invert(9%) sepia(32%) saturate(2251%) hue-rotate(191deg) brightness(93%) contrast(108%);
+  cursor: pointer;
 }
 section {
   display: flex;
