@@ -42,12 +42,9 @@ function ButtonMaker(textContent, linkLocation) {
   return buttonLink;
 }
 
-function SmallerButton(textContent, linkLocation, x, y, minWid) {
+function SmallerButton(textContent, linkLocation, x, y) {
   const newButton = ButtonMaker(textContent, linkLocation);
-  newButton.setAttribute(
-    "style",
-    `transform: scale(${x}, ${y}); min-width: ${minWid}`
-  );
+  newButton.setAttribute("style", `transform: scale(${x}, ${y})`);
   // newButton.style.minWidth = minWid;
   newButton.classList.add("small-button");
 
@@ -59,7 +56,7 @@ document
   .appendChild(ButtonMaker("Projects", "https://gecko-api-clzfrc1hh.now.sh/"));
 document
   .querySelector(".drop-down")
-  .appendChild(SmallerButton("About", "#", 0.5, 0.5, "19rem"));
+  .appendChild(SmallerButton("About", "#", 0.5, 0.5));
 document
   .querySelector(".drop-down")
   .appendChild(SmallerButton("Contact", "#", 0.5, 0.5));
