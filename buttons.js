@@ -44,17 +44,22 @@ function ButtonMaker(textContent, linkLocation) {
 
 function SmallerButton(textContent, linkLocation, x, y, minWid) {
   const newButton = ButtonMaker(textContent, linkLocation);
-  newButton.setAttribute("style", `transform: scale(${x}, ${y})`);
-  newButton.style.minWidth = minWid;
+  newButton.setAttribute(
+    "style",
+    `transform: scale(${x}, ${y}); min-width: ${minWid}`
+  );
+  // newButton.style.minWidth = minWid;
   newButton.classList.add("small-button");
 
   return newButton;
 }
 
-document.querySelector(".button").appendChild(ButtonMaker("Projects", "#"));
+document
+  .querySelector(".button")
+  .appendChild(ButtonMaker("Projects", "https://gecko-api-clzfrc1hh.now.sh/"));
 document
   .querySelector(".drop-down")
-  .appendChild(SmallerButton("About", "#", 0.5, 0.5));
+  .appendChild(SmallerButton("About", "#", 0.5, 0.5, "19rem"));
 document
   .querySelector(".drop-down")
   .appendChild(SmallerButton("Contact", "#", 0.5, 0.5));
